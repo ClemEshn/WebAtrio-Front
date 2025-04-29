@@ -2,6 +2,8 @@ import './App.css';
 import AddPersonForm from './components/AddPersonForm';
 import PersonList from './components/PersonList';
 import { useState } from 'react';
+import SearchByCompany from './components/SeachByCompany';
+import SearchEmplois from './components/SearchByIdAndPeriod';
 
 function App() {
   const [reloadKey, setReloadKey] = useState(0);
@@ -11,7 +13,12 @@ function App() {
   return (
     <div className="App">
       <h1>Eischen Clément - Web Atrio</h1>
+      <SearchByCompany/>
+      <hr/>
+      <SearchEmplois />
+      <hr/>
       <AddPersonForm reload={reload} />
+      <hr/>
       <PersonList key={reloadKey} />
     </div>
   );

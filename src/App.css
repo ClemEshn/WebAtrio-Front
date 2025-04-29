@@ -37,6 +37,18 @@
   padding: 2em;
 }
 
-.read-the-docs {
-  color: #888;
+input {
+  display: block;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  background: teal;
+  color: white;
+  border: none;
+  cursor: pointer;
 }

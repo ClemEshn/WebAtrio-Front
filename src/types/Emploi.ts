@@ -1,6 +1,6 @@
 export interface Emploi {
     id: number;
-    entreprise: string;
+    nomEntreprise: string;
     poste: string;
     dateDebut: string;
     dateFin?: string | null;

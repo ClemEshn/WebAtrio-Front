@@ -42,35 +42,66 @@ export default function AddPersonForm({ reload }: { reload: () => void }) {
   };
 
   return (
-    <form onSubmit={handleSubmit} style={{ marginBottom: "2rem" }}>
-      <h2>Ajouter une personne</h2>
-      <input
-        type="text"
-        name="prenom"
-        placeholder="Prénom"
-        value={formData.prenom}
-        onChange={handleChange}
-        required
-      />
-      <br />
-      <input
-        type="text"
-        name="nom"
-        placeholder="Nom"
-        value={formData.nom}
-        onChange={handleChange}
-        required
-      />
-      <br />
-      <input
-        type="date"
-        name="dateNaissance"
-        value={formData.dateNaissance}
-        onChange={handleChange}
-        required
-      />
-      <br />
-      <button type="submit" style={{ marginTop: "1rem" }}>Ajouter</button>
-    </form>
+    <div style={{
+      display: "flex",
+      justifyContent: "center",
+      marginTop: "2rem",
+      marginBottom: "2rem"
+    }}>
+      <form
+        onSubmit={handleSubmit}
+        style={{
+          backgroundColor: "#f9f9f9",
+          padding: "2rem",
+          borderRadius: "8px",
+          boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)",
+          width: "100%",
+          maxWidth: "400px"
+        }}
+      >
+        <h2 style={{ textAlign: "center", marginBottom: "1.5rem" }}>Ajouter une personne</h2>
+
+        <input
+          type="text"
+          name="prenom"
+          placeholder="Prénom"
+          value={formData.prenom}
+          onChange={handleChange}
+          required
+          style={{ width: "100%", padding: "0.5rem", marginBottom: "1rem" }}
+        />
+        <input
+          type="text"
+          name="nom"
+          placeholder="Nom"
+          value={formData.nom}
+          onChange={handleChange}
+          required
+          style={{ width: "100%", padding: "0.5rem", marginBottom: "1rem" }}
+        />
+        <input
+          type="date"
+          name="dateNaissance"
+          value={formData.dateNaissance}
+          onChange={handleChange}
+          required
+          style={{ width: "100%", padding: "0.5rem", marginBottom: "1.5rem" }}
+        />
+        <button
+          type="submit"
+          style={{
+            width: "100%",
+            padding: "0.7rem",
+            backgroundColor: "#007bff",
+            color: "white",
+            border: "none",
+            borderRadius: "4px",
+            cursor: "pointer"
+          }}
+        >
+          Ajouter
+        </button>
+      </form>
+    </div>
   );
 }
